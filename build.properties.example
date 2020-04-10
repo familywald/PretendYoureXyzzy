@@ -72,7 +72,7 @@ hibernate.url=jdbc:postgresql://postgres:5432/pyx
 
 # these likely need specified even with sqlite, even though they don't matter
 hibernate.username=pyx
-hibernate.password=CorrectHorseBatteryStaple
+hibernate.password=pyx
 
 # debugging information
 hibernate.sql.show=false
