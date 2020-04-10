@@ -11,20 +11,23 @@
   <name>pyx</name>
 
   <scm>
-    <url>https://github.com/ajanata/PretendYoureXyzzy</url>
-    <connection>scm:git:ssh://git@github.com/ajanata/PretendYoureXyzzy.git</connection>
+    <url>https://github.com/familywald/PretendYoureXyzzy</url>
+    <connection>scm:git:ssh://git@github.com/familywald/PretendYoureXyzzy.git</connection>
   </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
+
+  <!--
   <repositories>
     <repository>
       <id>hibernatesqlite-maven</id>
       <url>https://hibernate-sqlite.googlecode.com/svn/trunk/mavenrepo</url>
     </repository>
   </repositories>
+  -->
+
 
   <developers>
     <developer>
@@ -190,7 +193,7 @@
           <stopKey>STOP</stopKey>
         </configuration>
       </plugin>
-
+      <!--
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
@@ -210,6 +213,7 @@
           <shortRevisionLength>7</shortRevisionLength>
         </configuration>
       </plugin>
+      -->
     </plugins>
     <pluginManagement>
       <plugins>
@@ -357,6 +361,16 @@
       <groupId>com.maxmind.geoip2</groupId>
       <artifactId>geoip2</artifactId>
       <version>2.8.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.fasterxml.jackson</groupId>
+          <artifactId>jackson-bom</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+        </exclusion>        
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>net.sf.uadetector</groupId>
